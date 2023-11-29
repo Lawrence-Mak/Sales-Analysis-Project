@@ -49,39 +49,36 @@ The dataset has been loaded and underwent necessary cleaning and preprocessing s
 #### Customer Demographics
   - Explore the distribution of sales across different customer types (e.g., Member vs. Normal) and genders. Visualize the average sales or quantity purchased by each customer type.
 
-![image](https://github.com/Lawrence-Mak/Sales-Analysis-Project/assets/83872954/08edfed5-aa32-4ebb-a334-652838bf853c)
-
-
+![image](https://github.com/Lawrence-Mak/Sales-Analysis-Project/assets/83872954/371ed609-9497-436d-b3be-ec3f69b51417)
 
 <details>
 <summary style="color: blue;">Click to expand</summary>
   
 ```python
-# Create subplots
-fig, axes = plt.subplots(nrows=2, ncols=2, figsize=(14, 10))
+# Set the figure size
+plt.figure(figsize=(16, 12))
 
-# Plot 1: Distribution of Member and Non-Member
+# Plot 2: Distribution of Member and Non-Member
 member_distribution = df['Customer type'].value_counts()
-axes_pie1 = plt.subplot2grid((2, 2), (0, 0), colspan=1)
-axes_pie1.pie(member_distribution, labels=member_distribution.index, autopct='%1.1f%%', colors=['sandybrown', 'darkseagreen'])
-axes_pie1.set_title('Distribution of Customer Types (Member vs. Non-Member)')
-
-# Plot 2: Distribution of Genders
-gender_distribution = df['Gender'].value_counts()
-axes[0, 1].pie(gender_distribution, labels=gender_distribution.index, autopct='%1.1f%%', colors=['lightcoral', 'skyblue'])
-axes[0, 1].set_title('Distribution of Genders')
+plt.subplot(3, 2, 1)
+plt.pie(member_distribution, labels=member_distribution.index, autopct='%1.1f%%', colors=['sandybrown', 'darkseagreen'])
+plt.title('Distribution of Customer Types (Member vs. Non-Member)')
 
 # Plot 3: Total Sales by Customer Type
-sns.barplot(x='Customer type', y='Total', data=df, estimator=sum, ci=None, palette=['sandybrown', 'darkseagreen'], ax=axes[1, 0])
-axes[1, 0].set_title('Total Sales by Customer Type')
-axes[1, 0].set_xlabel('Customer Type')
-axes[1, 0].set_ylabel('Total Sales')
+plt.subplot(3, 2, 2)
+sns.barplot(x='Customer type', y='Total', data=df, estimator=sum, palette=['sandybrown', 'darkseagreen'])
+plt.title('Total Sales by Customer Type')
+plt.xlabel('Customer Type')
+plt.ylabel('Total Sales')
 
-# Plot 4: Total Sales by Gender
-sns.barplot(x='Gender', y='Total', data=df, estimator=sum, ci=None, palette=['lightcoral', 'skyblue'], ax=axes[1, 1])
-axes[1, 1].set_title('Total Sales by Gender')
-axes[1, 1].set_xlabel('Gender')
-axes[1, 1].set_ylabel('Total Sales')
+# Plot 1: Popular Product Lines by Customer Type (taking up the entire bottom row)
+plt.subplot(3, 2, (3, 4))
+sns.countplot(x='Product line', hue='Customer type', data=df, palette={'Member': 'sandybrown', 'Normal': 'darkseagreen'})
+plt.title('Popular Product Lines by Customer Type')
+plt.xlabel('Product Line')
+plt.ylabel('Count')
+plt.xticks(rotation=45, ha='right')
+plt.legend(title='Customer Type')
 
 # Adjust layout
 plt.tight_layout()
@@ -92,63 +89,47 @@ plt.show()
 
 </details>
 
-![image](https://github.com/Lawrence-Mak/Sales-Analysis-Project/assets/83872954/4bca3cc8-56f1-469c-8351-a17fef32f40e)
-
-
-
+![image](https://github.com/Lawrence-Mak/Sales-Analysis-Project/assets/83872954/f9a5f537-6c9d-4f10-b057-7de7e960ef47)
 
 <details>
 <summary style="color: blue;">Code</summary>
   
 ```python
 # Set the figure size
-plt.figure(figsize=(12, 6))
+plt.figure(figsize=(16, 12))
 
-# Create a countplot to compare popular product lines between male and female customers
+# Plot 2: Distribution of Genders (pie chart)
+gender_distribution = df['Gender'].value_counts()
+plt.subplot(3, 2, 1)
+plt.pie(gender_distribution, labels=gender_distribution.index, autopct='%1.1f%%', colors=['lightcoral', 'skyblue'])
+plt.title('Distribution of Genders')
+
+# Plot 4: Total Sales by Gender
+plt.subplot(3, 2, 2)
+sns.barplot(x='Gender', y='Total', data=df, estimator=sum, ci=None, palette=['lightcoral', 'skyblue'])
+plt.title('Total Sales by Gender')
+plt.xlabel('Gender')
+plt.ylabel('Total Sales')
+
+# Plot 6: Popular Product Lines by Gender (taking up the entire bottom row)
+plt.subplot(3, 2, (3, 4))
 sns.countplot(x='Product line', hue='Gender', data=df, palette={'Male': 'skyblue', 'Female': 'lightcoral'})
-
-# Set labels and title
 plt.title('Popular Product Lines by Gender')
 plt.xlabel('Product Line')
 plt.ylabel('Count')
-
-# Rotate x-axis labels for better visibility
 plt.xticks(rotation=45, ha='right')
-
-# Show the legend
 plt.legend(title='Gender')
 
-# Show the plot
+# Adjust layout
+plt.tight_layout()
+
+# Show the plots
 plt.show()
 ```
 </details>
 
 #### Branch Analysis
   - Investigate sales distribution across different branches. Analyze the performance of each branch in terms of total sales and customer satisfaction rating
-```python
-# Create subplots with 1 row and 2 columns
-fig, axes = plt.subplots(1, 2, figsize=(15, 6))
-
-# Plot Total Sales
-axes[0].bar(df['Branch'].unique(), df.groupby('Branch')['Total'].sum(), color='tab:blue')
-axes[0].set_title('Total Sales by Branch')
-axes[0].set_xlabel('Branch')
-axes[0].set_ylabel('Total Sales')
-
-# Plot Customer Satisfaction Ratings
-axes[1].bar(df['Branch'].unique(), df.groupby('Branch')['Rating'].mean(), color='tab:orange')
-axes[1].set_title('Average Rating by Branch')
-axes[1].set_xlabel('Branch')
-axes[1].set_ylabel('Average Rating (out of 10)')  # Adjusted y-axis label
-
-# Set y-axis limits for average rating
-axes[1].set_ylim(0, 10)
-
-# Adjust layout
-plt.tight_layout()
-plt.show()
-```
-![image](https://github.com/Lawrence-Mak/Sales-Analysis-Project/assets/83872954/7dc71f09-e3ec-4da1-9bdd-ce533df5cd70)
 
 
 
