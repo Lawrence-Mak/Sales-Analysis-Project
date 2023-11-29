@@ -49,7 +49,8 @@ The dataset has been loaded and underwent necessary cleaning and preprocessing s
 #### Customer Demographics
   - Explore the distribution of sales across different customer types (e.g., Member vs. Normal) and genders. Visualize the average sales or quantity purchased by each customer type.
 
-![image](https://github.com/Lawrence-Mak/Sales-Analysis-Project/assets/83872954/de68310f-4489-4cbc-8400-5125db9a44c2)
+![image](https://github.com/Lawrence-Mak/Sales-Analysis-Project/assets/83872954/08edfed5-aa32-4ebb-a334-652838bf853c)
+
 
 
 <details>
@@ -91,7 +92,9 @@ plt.show()
 
 </details>
 
-![image](https://github.com/Lawrence-Mak/Sales-Analysis-Project/assets/83872954/ec3e73ae-3fe0-4b1a-a368-68fece9827e1)
+![image](https://github.com/Lawrence-Mak/Sales-Analysis-Project/assets/83872954/4bca3cc8-56f1-469c-8351-a17fef32f40e)
+
+
 
 
 <details>
