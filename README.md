@@ -68,19 +68,19 @@ The dataset has been loaded and underwent necessary cleaning and preprocessing s
 - Investigate sales trends across different seasons or months.
   Analyze whether certain product types are more popular during specific seasons.
 
-####Customer Ratings vs. Sales:
+#### Customer Ratings vs. Sales:
 - Explore the relationship between customer ratings and total sales.
   Analyze whether higher-rated products lead to higher sales.
 
-####Promotions and Discounts:
+#### Promotions and Discounts:
 - Investigate the impact of promotions or discounts on sales.
   Analyze whether there is a correlation between promotional periods and increased sales.
 
-####Customer Loyalty:
+#### Customer Loyalty:
 - Explore repeat purchases and customer loyalty.
   Analyze whether there are specific product types that attract repeat customers.
 
-####Price Elasticity:
+#### Price Elasticity:
 - Analyze the relationship between changes in price and changes in quantity sold.
   Explore the price elasticity of demand for different product categories.
 
