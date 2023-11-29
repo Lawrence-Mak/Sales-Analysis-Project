@@ -128,6 +128,40 @@ plt.show()
 ```
 </details>
 
+#### Time-of-Day Analysis
+- Analyze sales patterns based on the time of day.
+  Explore whether there are specific times when sales peak or decline.
+
+![image](https://github.com/Lawrence-Mak/Sales-Analysis-Project/assets/83872954/f4d43b1d-57f0-4f16-932a-a7aa1c6b4da7)
+
+<details>
+<summary style="color: blue;">Code</summary>
+  
+```python
+# Convert 'Time' to datetime format
+df['Time'] = pd.to_datetime(df['Time'])
+
+# Set the figure size
+plt.figure(figsize=(12, 6))
+
+# Plot sales patterns based on the time of day
+sns.lineplot(x=df['Time'].dt.hour, y='Total', data=df, estimator=sum, ci=None, color='skyblue')
+
+# Set labels and title
+plt.title('Sales Patterns Based on Time of Day')
+plt.xlabel('Hour of Day')
+plt.ylabel('Total Sales')
+
+# Customize x-axis ticks to start at 10 and end at 20
+plt.xticks(range(10, 21))
+
+# Show the plot
+plt.show()
+```
+</details>
+
+
+
 #### Branch Analysis
   - Investigate sales distribution across different branches. Analyze the performance of each branch in terms of total sales and customer satisfaction rating
 
@@ -141,9 +175,7 @@ plt.show()
  - Visualize the distribution of unit prices and quantities for products.
   Explore the relationship between unit price, quantity, and total sales.
   
-#### Time-of-Day Analysis
-- Analyze sales patterns based on the time of day.
-  Explore whether there are specific times when sales peak or decline.
+
 
 #### Seasonal Trends
 - Investigate sales trends across different seasons or months.
