@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to the Supermarket Sales Analysis project! This repository contains code and documentation for analyzing historical sales data from a supermarket company. The dataset records sales from three different branches over a period of three months. The goal is to apply predictive data analytics methods to gain insights into sales trends. The data used for this project can be found at https://www.kaggle.com/datasets/aungpyaeap/supermarket-sales/
+Welcome to the Supermarket Sales Analysis project! This repository contains code and documentation for analyzing historical sales data from a supermarket company. The dataset records sales from three different branches over a period of three months. The goal is to apply predictive data analytics methods to gain insights into sales trends.
 
 ## Table of Contents
 
@@ -37,6 +37,9 @@ The dataset captures historical sales of a supermarket company in three differen
 
 ### Purpose
 This dataset is suitable for predictive data analytics, offering opportunities to analyze and predict supermarket sales trends.
+
+### Acknowledgements 
+The data used for this project can be found at https://www.kaggle.com/datasets/aungpyaeap/supermarket-sales/ Thank you for the author Aung Pyae for collecting this data.
 
 ## Key Features
 
