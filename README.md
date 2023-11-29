@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to the Supermarket Sales Analysis project! This repository contains code and documentation for analyzing historical sales data from a supermarket company. The dataset records sales from three different branches over a period of three months. The goal is to apply predictive data analytics methods to gain insights into sales trends.
+This repository contains code and documentation for analyzing historical sales data from a supermarket company. The dataset records sales from three different branches over a period of three months. The goal is to apply predictive data analytics methods to gain insights into sales trends.
 
 ## Table of Contents
 
@@ -45,6 +45,37 @@ The data used for this project can be found at https://www.kaggle.com/datasets/a
 
 1. **Data Cleaning and Preprocessing:**
    - Clean and preprocess the dataset for analysis.
+  
+   - ## Data Cleaning and Preprocessing
+
+### Overview
+
+The dataset has been loaded and underwent necessary cleaning and preprocessing steps to ensure its suitability for analysis. This section provides an overview of the data cleaning process.
+
+### Steps Taken
+
+1. **Loading the Dataset:**
+   - The dataset, named `supermarket_sales.csv`, was loaded into a Pandas DataFrame.
+
+2. **Handling Missing Values:**
+   - No missing values were found in the dataset. All columns have complete data.
+
+3. **Converting 'Date' to Datetime Format:**
+   - The 'Date' column was converted to the datetime64 data type for better handling of date-related operations.
+
+4. **Updated Data Information:**
+   - After the data cleaning steps, the dataset information was displayed again to confirm the changes.
+
+### Updated Dataset Information
+
+The dataset now includes the following data types:
+
+- Object: Invoice ID, Branch, City, Customer type, Gender, Product line, Time, Payment
+- Float64: Unit price, Tax 5%, Total, cogs, gross margin percentage, gross income, Rating
+- Int64: Quantity
+- Datetime64: Date
+
+The cleaned dataset has been saved as `cleaned_supermarket_sales.csv` for further analysis.
 
 2. **Exploratory Data Analysis (EDA):**
    - Explore key statistics, trends, and patterns in the sales data.
