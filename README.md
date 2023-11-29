@@ -49,7 +49,8 @@ The dataset has been loaded and underwent necessary cleaning and preprocessing s
 #### Customer Demographics
   - Explore the distribution of sales across different customer types (e.g., Member vs. Normal) and genders. Visualize the average sales or quantity purchased by each customer type.
 
-![image](https://github.com/Lawrence-Mak/Sales-Analysis-Project/assets/83872954/a3445936-ac35-46a2-92ab-d4fc7e017824)
+![image](https://github.com/Lawrence-Mak/Sales-Analysis-Project/assets/83872954/de68310f-4489-4cbc-8400-5125db9a44c2)
+
 
 <details>
 <summary style="color: blue;">Click to expand</summary>
@@ -58,7 +59,7 @@ The dataset has been loaded and underwent necessary cleaning and preprocessing s
 # Create subplots
 fig, axes = plt.subplots(nrows=2, ncols=2, figsize=(14, 10))
 
-# Plot 5: Distribution of Member and Non-Member
+# Plot 1: Distribution of Member and Non-Member
 member_distribution = df['Customer type'].value_counts()
 axes_pie1 = plt.subplot2grid((2, 2), (0, 0), colspan=1)
 axes_pie1.pie(member_distribution, labels=member_distribution.index, autopct='%1.1f%%', colors=['sandybrown', 'darkseagreen'])
@@ -87,9 +88,11 @@ plt.tight_layout()
 # Show the plots
 plt.show()
 ```
+
 </details>
 
-![image](https://github.com/Lawrence-Mak/Sales-Analysis-Project/assets/83872954/ed1f8ffd-dd51-4749-a8d7-cf798b986ccb)
+![image](https://github.com/Lawrence-Mak/Sales-Analysis-Project/assets/83872954/ec3e73ae-3fe0-4b1a-a368-68fece9827e1)
+
 
 <details>
 <summary style="color: blue;">Code</summary>
