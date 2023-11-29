@@ -52,7 +52,7 @@ The dataset has been loaded and underwent necessary cleaning and preprocessing s
 ![image](https://github.com/Lawrence-Mak/Sales-Analysis-Project/assets/83872954/a3445936-ac35-46a2-92ab-d4fc7e017824)
 
 <details>
-<summary style="color: blue;">Code</summary>
+<summary style="color: blue;">Click to expand</summary>
   
 ```python
 # Create subplots
