@@ -44,7 +44,7 @@ The data used for this project can be found at https://www.kaggle.com/datasets/a
 - [Data Cleaning and Preprocessing](#Data-Cleaning-and-Preprocessing)
 - [Exploratory Data Analysis](#Exploratory-data-Analysis-(EDA))
 
-### 1. Data Cleaning and Preprocessing
+### Data Cleaning and Preprocessing
 
 ### Overview
 
