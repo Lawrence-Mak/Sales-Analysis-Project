@@ -76,7 +76,7 @@ axes[1, 1].set_ylabel('Total Sales')
 
 # Adjust layout
 plt.tight_layout()
-plt.show()
+plt.show()```
 
 #### Branch Analysis
   - Investigate sales distribution across different branches. Analyze the performance of each branch in terms of total sales and customer satisfaction ratings.
