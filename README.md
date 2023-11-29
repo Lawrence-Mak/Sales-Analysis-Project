@@ -48,6 +48,35 @@ The dataset has been loaded and underwent necessary cleaning and preprocessing s
 
 #### Customer Demographics
   - Explore the distribution of sales across different customer types (e.g., Member vs. Normal) and genders. Visualize the average sales or quantity purchased by each customer type.
+  - '''# Create subplots
+fig, axes = plt.subplots(nrows=2, ncols=2, figsize=(14, 10))
+
+# Plot 1: Distribution of Customer Types
+sns.countplot(x='Customer type', data=df, palette='viridis', ax=axes[0, 0])
+axes[0, 0].set_title('Distribution of Customer Types')
+axes[0, 0].set_xlabel('Customer Type')
+axes[0, 0].set_ylabel('Count')
+
+# Plot 2: Distribution of Genders
+gender_distribution = df['Gender'].value_counts()
+axes[0, 1].pie(gender_distribution, labels=gender_distribution.index, autopct='%1.1f%%', colors=['skyblue', 'lightcoral'])
+axes[0, 1].set_title('Distribution of Genders')
+
+# Plot 3: Total Sales by Customer Type
+sns.barplot(x='Customer type', y='Total', data=df, estimator=sum, ci=None, palette='viridis', ax=axes[1, 0])
+axes[1, 0].set_title('Total Sales by Customer Type')
+axes[1, 0].set_xlabel('Customer Type')
+axes[1, 0].set_ylabel('Total Sales')
+
+# Plot 4: Total Sales by Gender
+sns.barplot(x='Gender', y='Total', data=df, estimator=sum, ci=None, palette='viridis', ax=axes[1, 1])
+axes[1, 1].set_title('Total Sales by Gender')
+axes[1, 1].set_xlabel('Gender')
+axes[1, 1].set_ylabel('Total Sales')
+
+# Adjust layout
+plt.tight_layout()
+plt.show()'''
 
 #### Branch Analysis
   - Investigate sales distribution across different branches. Analyze the performance of each branch in terms of total sales and customer satisfaction ratings.
