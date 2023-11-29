@@ -48,7 +48,7 @@ The dataset has been loaded and underwent necessary cleaning and preprocessing s
 
 #### Customer Demographics
   - Explore the distribution of sales across different customer types (e.g., Member vs. Normal) and genders. Visualize the average sales or quantity purchased by each customer type.
-  - '''# Create subplots
+  -```# Create subplots
 fig, axes = plt.subplots(nrows=2, ncols=2, figsize=(14, 10))
 
 # Plot 1: Distribution of Customer Types
@@ -76,7 +76,7 @@ axes[1, 1].set_ylabel('Total Sales')
 
 # Adjust layout
 plt.tight_layout()
-plt.show()'''
+plt.show()
 
 #### Branch Analysis
   - Investigate sales distribution across different branches. Analyze the performance of each branch in terms of total sales and customer satisfaction ratings.
