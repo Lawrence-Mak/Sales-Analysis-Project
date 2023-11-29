@@ -2,12 +2,13 @@
 
 ## Introduction
 
-This repository contains code and documentation for analyzing historical sales data from a supermarket company. The dataset records sales from three different branches over a period of three months. The goal is to apply predictive data analytics methods to gain insights into sales trends.
+This project involves exploratory data analysis (EDA), visualizations, and machine learning model training/testing using a sales dataset.
 
 ## Table of Contents
 
 - [About Dataset](#about-dataset)
 - [Key Features](#key-features)
+-    [EDA]
 
 ## About Dataset
 
