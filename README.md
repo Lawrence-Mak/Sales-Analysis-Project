@@ -42,7 +42,7 @@ The data used for this project can be found at https://www.kaggle.com/datasets/a
 ## Key Features
 
 - [Data Cleaning and Preprocessing](#Data-Cleaning-and-Preprocessing)
-- [Exploratory Data Analysis](#Exploratory-data-Analysis)
+- [Exploratory Data Analysis](#Exploratory-data-Analysis-(EDA))
 
 ## Data Cleaning and Preprocessing
 
