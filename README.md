@@ -47,15 +47,15 @@ The dataset has been loaded and underwent necessary cleaning and preprocessing s
 ### Exploratory Data Analysis (EDA)
 
 #### Customer Demographics
-  Explore the distribution of sales across different customer types (e.g., Member vs. Normal) and genders.
+  - Explore the distribution of sales across different customer types (e.g., Member vs. Normal) and genders.
   Visualize the average sales or quantity purchased by each customer type.
 
 #### Branch Analysis
-  Investigate sales distribution across different branches.
-  Analyze the performance of each branch in terms of total sales and customer satisfaction ratings.
+  - Investigate sales distribution across different branches.
+  - Analyze the performance of each branch in terms of total sales and customer satisfaction ratings.
 
 #### Payment Method Analysis
-  Examine the distribution of sales based on payment methods.
+Examine the distribution of sales based on payment methods.
   Compare the average sales for different payment methods.
 
 #### Unit Price and Quantity Analysis
