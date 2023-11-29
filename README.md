@@ -8,7 +8,7 @@ This project involves exploratory data analysis (EDA), visualizations, and machi
 
 - [About Dataset](#about-dataset)
 - [Key Features](#key-features)
--    [EDA]
+   - [EDA]
 
 ## About Dataset
 
