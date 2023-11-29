@@ -81,6 +81,28 @@ plt.show()
 ```
 ![image](https://github.com/Lawrence-Mak/Sales-Analysis-Project/assets/83872954/a3445936-ac35-46a2-92ab-d4fc7e017824)
 
+```python
+# Set the figure size
+plt.figure(figsize=(12, 6))
+
+# Create a countplot to compare popular product lines between male and female customers
+sns.countplot(x='Product line', hue='Gender', data=df, palette={'Male': 'skyblue', 'Female': 'lightcoral'})
+
+# Set labels and title
+plt.title('Popular Product Lines by Gender')
+plt.xlabel('Product Line')
+plt.ylabel('Count')
+
+# Rotate x-axis labels for better visibility
+plt.xticks(rotation=45, ha='right')
+
+# Show the legend
+plt.legend(title='Gender')
+
+# Show the plot
+plt.show()
+```
+![image](https://github.com/Lawrence-Mak/Sales-Analysis-Project/assets/83872954/00959823-3da6-49e8-a53e-238699d26ec3)
 
 #### Branch Analysis
   - Investigate sales distribution across different branches. Analyze the performance of each branch in terms of total sales and customer satisfaction rating
@@ -108,6 +130,8 @@ plt.tight_layout()
 plt.show()
 ```
 ![image](https://github.com/Lawrence-Mak/Sales-Analysis-Project/assets/83872954/7dc71f09-e3ec-4da1-9bdd-ce533df5cd70)
+
+
 
 #### Payment Method Analysis
 - Examine the distribution of sales based on payment methods.
