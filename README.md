@@ -8,8 +8,6 @@ This repository contains code and documentation for analyzing historical sales d
 
 - [About Dataset](#about-dataset)
 - [Key Features](#key-features)
-- [Usage](#usage)
-- [Data Analysis](#data-analysis)
 
 ## About Dataset
 
@@ -43,10 +41,7 @@ The data used for this project can be found at https://www.kaggle.com/datasets/a
 
 ## Key Features
 
-1. **Data Cleaning and Preprocessing:**
-   - Clean and preprocess the dataset for analysis.
-  
-   - ## Data Cleaning and Preprocessing
+1. ## Data Cleaning and Preprocessing
 
 ### Overview
 
