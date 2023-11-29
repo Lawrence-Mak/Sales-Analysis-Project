@@ -82,7 +82,31 @@ plt.show()
 ![image](https://github.com/Lawrence-Mak/Sales-Analysis-Project/assets/83872954/d52f1eb5-6d3e-4b0f-a52a-714ee060a4cc)
 
 #### Branch Analysis
-  - Investigate sales distribution across different branches. Analyze the performance of each branch in terms of total sales and customer satisfaction ratings.
+  - Investigate sales distribution across different branches. Analyze the performance of each branch in terms of total sales and customer satisfaction rating
+```python
+# Create subplots with 1 row and 2 columns
+fig, axes = plt.subplots(1, 2, figsize=(15, 6))
+
+# Plot Total Sales
+axes[0].bar(df['Branch'].unique(), df.groupby('Branch')['Total'].sum(), color='tab:blue')
+axes[0].set_title('Total Sales by Branch')
+axes[0].set_xlabel('Branch')
+axes[0].set_ylabel('Total Sales')
+
+# Plot Customer Satisfaction Ratings
+axes[1].bar(df['Branch'].unique(), df.groupby('Branch')['Rating'].mean(), color='tab:orange')
+axes[1].set_title('Average Rating by Branch')
+axes[1].set_xlabel('Branch')
+axes[1].set_ylabel('Average Rating (out of 10)')  # Adjusted y-axis label
+
+# Set y-axis limits for average rating
+axes[1].set_ylim(0, 10)
+
+# Adjust layout
+plt.tight_layout()
+plt.show()
+```
+![image](https://github.com/Lawrence-Mak/Sales-Analysis-Project/assets/83872954/7dc71f09-e3ec-4da1-9bdd-ce533df5cd70)
 
 #### Payment Method Analysis
 - Examine the distribution of sales based on payment methods.
