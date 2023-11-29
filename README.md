@@ -49,8 +49,10 @@ The dataset has been loaded and underwent necessary cleaning and preprocessing s
 #### Customer Demographics
   - Explore the distribution of sales across different customer types (e.g., Member vs. Normal) and genders. Visualize the average sales or quantity purchased by each customer type.
 
+![image](https://github.com/Lawrence-Mak/Sales-Analysis-Project/assets/83872954/a3445936-ac35-46a2-92ab-d4fc7e017824)
+
 <details>
-<summary>Code</summary>
+<summary style="color: blue;">Code</summary>
   
 ```python
 # Create subplots
@@ -85,8 +87,10 @@ plt.show()
 ```
 </details>
 
-![image](https://github.com/Lawrence-Mak/Sales-Analysis-Project/assets/83872954/a3445936-ac35-46a2-92ab-d4fc7e017824)
-
+![image](https://github.com/Lawrence-Mak/Sales-Analysis-Project/assets/83872954/00959823-3da6-49e8-a53e-238699d26ec3)
+<details>
+<summary style="color: blue;">Code</summary>
+  
 ```python
 # Set the figure size
 plt.figure(figsize=(12, 6))
@@ -108,7 +112,7 @@ plt.legend(title='Gender')
 # Show the plot
 plt.show()
 ```
-![image](https://github.com/Lawrence-Mak/Sales-Analysis-Project/assets/83872954/00959823-3da6-49e8-a53e-238699d26ec3)
+</details>
 
 #### Branch Analysis
   - Investigate sales distribution across different branches. Analyze the performance of each branch in terms of total sales and customer satisfaction rating
