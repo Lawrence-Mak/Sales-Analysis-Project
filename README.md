@@ -43,7 +43,7 @@ The dataset has been loaded and underwent necessary cleaning and preprocessing s
 
 4. **Updated Data Information:**
    - After the data cleaning steps, the dataset information was displayed again to confirm the changes.
-  
+
 A preview of the dataset:
 
 | Invoice ID   | Branch | City      | Customer type | Gender | Product line          | Unit price | Quantity | Tax 5% | Total   | Date      | Time  | Payment       | cogs  | gross margin percentage | gross income | Rating |
