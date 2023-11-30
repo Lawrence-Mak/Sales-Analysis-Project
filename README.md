@@ -22,10 +22,15 @@ The dataset captures historical sales of a supermarket company in three differen
 Attribute information:
 
 Invoice id: Computer generated sales slip invoice identification number
+
 Branch: Branch of supercenter (3 branches are available identified by A, B and C).
+
 City: Location of supercenters
+
 Customer type: Type of customers, recorded by Members for customers using member card and Normal for without member card.
+
 Gender: Gender type of customer
+
 Product line: General item categorization groups - Electronic accessories, Fashion accessories, Food and beverages, Health and beauty, Home and lifestyle, Sports and travel
 Unit price: Price of each product in $
 Quantity: Number of products purchased by customer
@@ -38,9 +43,6 @@ COGS: Cost of goods sold
 Gross margin percentage: Gross margin percentage
 Gross income: Gross income
 Rating: Customer stratification rating on their overall shopping experience (On a scale of 1 to 10)
-
-
-
 
 
 
