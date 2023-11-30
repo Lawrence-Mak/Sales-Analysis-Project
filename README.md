@@ -7,10 +7,13 @@ This project involves exploratory data analysis (EDA), visualizations, and machi
 ## Table of Contents
 
 - [About Dataset](#about-dataset)
-- [Key Features](#key-features)
+- [Key Features]
   - [Data Cleaning and Preprocessing](#data-cleaning-and-preprocessing)
-    - test
   - [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
+    - [Customer Demographics](#Customer-Demographics)
+    - [Time-of-Day Analysis](#Time-of-Day-Analysis)
+    - [Branch Analysis](#Branch-Analysis)
+    - [Payment Method Analysis](#Payment-Method-analysis)
   - [Machine Learning](#machine-learning)
 
 ## About Dataset
