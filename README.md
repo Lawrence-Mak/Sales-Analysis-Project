@@ -1,11 +1,10 @@
 # Supermarket Sales Analysis
 
 ## Introduction
-This project involves exploratory data analysis (EDA), visualizations, and machine learning model training/testing using a sales dataset.
+This project involves exploratory data analysis (EDA), visualizations, and machine learning model training/testing using a sales dataset found here https://www.kaggle.com/datasets/aungpyaeap/supermarket-sales.
 
 ## Table of Contents
 
-- [About Dataset](#about-dataset)
 - [Key Features](#key-features)
   - [Data Cleaning and Preprocessing](#data-cleaning-and-preprocessing)
   - [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
@@ -20,13 +19,29 @@ This project involves exploratory data analysis (EDA), visualizations, and machi
 ### Context
 The dataset captures historical sales of a supermarket company in three different branches over a span of three months. Predictive data analytics methods can be applied to understand sales trends.
 
+Attribute information:
+Invoice id: Computer generated sales slip invoice identification number
+Branch: Branch of supercenter (3 branches are available identified by A, B and C).
+City: Location of supercenters
+Customer type: Type of customers, recorded by Members for customers using member card and Normal for without member card.
+Gender: Gender type of customer
+Product line: General item categorization groups - Electronic accessories, Fashion accessories, Food and beverages, Health and beauty, Home and lifestyle, Sports and travel
+Unit price: Price of each product in $
+Quantity: Number of products purchased by customer
+Tax: 5% tax fee for customer buying
+Total: Total price including tax
+Date: Date of purchase (Record available from January 2019 to March 2019)
+Time: Purchase time (10am to 9pm)
+Payment: Payment used by customer for purchase (3 methods are available – Cash, Credit card and Ewallet)
+COGS: Cost of goods sold
+Gross margin percentage: Gross margin percentage
+Gross income: Gross income
+Rating: Customer stratification rating on their overall shopping experience (On a scale of 1 to 10)
+
+
 ## Key Features
 
 ### Data Cleaning and Preprocessing
-
-#### Overview
-
-The dataset has been loaded and underwent necessary cleaning and preprocessing steps to ensure its suitability for analysis. This section provides an overview of the data cleaning process.
 
 #### Steps Taken
 1. **Loading the Dataset:**
@@ -36,7 +51,7 @@ The dataset has been loaded and underwent necessary cleaning and preprocessing s
 3. **Converting 'Date' to Datetime Format:**
    - The 'Date' column was converted to the datetime64 data type for better handling of date-related operations.
 4. **Updated Data Information:**
-   - After the data cleaning steps, the dataset information was displayed again to confirm the changes.
+   - After the data cleaning steps, the dataset information is displayed again to confirm the changes.
 
 A preview of the dataset:
 
@@ -355,7 +370,7 @@ R-squared: 1.0 Ranges from 0 to 1, where 1 indicates a perfect fit. An R-squared
 
 These results suggest that the model is performing exceptionally well on the testing dataset. However, it's essential to keep in mind that such perfect performance might be a sign of overfitting. Its almost impossible to achieve a perfect fit, therefore to the best of my knowledge this dataset has been created, instead of scraped from real world scenarios.
 
-In sumamry, we have created a perfect model, however there are many implications that this would never happen in the real world. Real-world data often contains noise, outliers, and missing values. In the first place, this dataset did not include any outliers, missing data, or noise. It is very likely that this dataset was generated or fabricated. The dataset itself is very linear, and does not capture the complexity of real world relationships. 
+In sumamry, we have created a perfect model, however there are many implications that this would never happen in the real world. Real-world data often contains noise, outliers, and missing values. In the first place, this dataset did not include any outliers, missing data, or noise. It is very likely that this dataset was generated synthetically for educational or illustrative purposes, it might not accurately represent a real-world scenario.
 
 
 
