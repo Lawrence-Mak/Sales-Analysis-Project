@@ -303,6 +303,70 @@ print(f"The code ends up keeping: {kept_variable}")
 
 This code checks the pairwise correlations between Tax, COGS, and Gross Income and decides which one to keep based on the highest correlation. In this case, we keep Gross Income as our predictive variable. 
 
+We will therefore use Unit Price, Quantity, and Gross Income as predictors for our regression analysis. 
+
+
+Train-Test Split:
+Split dataset into training and testing sets. The training set is used to train the model, and the testing set is used to evaluate its performance.
+
+```python
+X = df[['gross income', 'Unit price', 'Quantity']]  # Features
+y = df['Total']  # Target variable
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Display the shapes of the resulting sets
+print("Training set - Features:", X_train.shape, "Labels:", y_train.shape)
+print("Testing set - Features:", X_test.shape, "Labels:", y_test.shape)
+```
+
+Model Selection and Training
+Choose a regression model suitable for predicting total sales. We will train using a linear regression model
+```python
+# Initialize the linear regression model
+model = LinearRegression()
+
+# Train the model on the training set
+model.fit(X_train, y_train)
+
+# Make predictions on the testing set
+y_pred = model.predict(X_test)
+
+# Evaluate the model
+mse = mean_squared_error(y_test, y_pred)
+r2 = r2_score(y_test, y_pred)
+
+# Display the evaluation metrics
+print("Mean Squared Error:", mse)
+print("R-squared:", r2)
+
+# Optionally, you can visualize the predicted vs. actual values
+import matplotlib.pyplot as plt
+
+plt.scatter(y_test, y_pred)
+plt.xlabel("Actual Total Sales")
+plt.ylabel("Predicted Total Sales")
+plt.title("Actual vs. Predicted Total Sales")
+plt.show()
+```
+Mean Squared Error: 4.378067583449884e-27
+R-squared: 1.0
+![image](https://github.com/Lawrence-Mak/Sales-Analysis-Project/assets/83872954/b63403cd-e281-4bf1-bcf4-fd924e255ab8)
+
+
+Model Evaluation:
+Mean Squared Error: 4.378067583449884e-27 This is an extremely low MSE, which means the model's predictions are very close to the actual values. In fact, the predicted values are almost identical to the true values.
+R-squared: 1.0 Ranges from 0 to 1, where 1 indicates a perfect fit. An R-squared of 1.0 means that the model explains all the variability of the response data around its mean. In other words, the model perfectly predicts the target variable.
+
+These results suggest that the model is performing exceptionally well on the testing dataset. However, it's essential to keep in mind that such perfect performance might be a sign of overfitting. Its almost impossible to achieve a perfect fit, therefore to the best of my knowledge this dataset has been created, instead of scraped from real world scenarios.
+
+In sumamry, we have created a perfect model, however there are many implications that this would never happen in the real world. Real-world data often contains noise, outliers, and missing values. In the first place, this dataset did not include any outliers, missing data, or noise. It is very likely that this dataset was generated or fabricated. The dataset itself is very linear, and does not capture the complexity of real world relationships. 
+
+
+
+
+
 
 
 
