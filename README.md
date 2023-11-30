@@ -9,6 +9,7 @@ This project involves exploratory data analysis (EDA), visualizations, and machi
 - [About Dataset](#about-dataset)
 - [Key Features](#key-features)
   - [Data Cleaning and Preprocessing](#data-cleaning-and-preprocessing)
+    - test
   - [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
   - [Machine Learning](#machine-learning)
 
@@ -16,11 +17,6 @@ This project involves exploratory data analysis (EDA), visualizations, and machi
 
 ### Context
 The dataset captures historical sales of a supermarket company in three different branches over a span of three months. Predictive data analytics methods can be applied to understand sales trends.
-
-### Attribute Information
-- **Invoice id:** Computer-generated sales slip invoice identification number
-- **Branch:** Branch of supercenter (A, B, and C)
-- 
 
 ## Key Features
 
@@ -31,16 +27,12 @@ The dataset captures historical sales of a supermarket company in three differen
 The dataset has been loaded and underwent necessary cleaning and preprocessing steps to ensure its suitability for analysis. This section provides an overview of the data cleaning process.
 
 #### Steps Taken
-
 1. **Loading the Dataset:**
    - The dataset, named `supermarket_sales.csv`, was loaded into a Pandas DataFrame.
-
 2. **Handling Missing Values:**
    - No missing values were found in the dataset. All columns have complete data.
-
 3. **Converting 'Date' to Datetime Format:**
    - The 'Date' column was converted to the datetime64 data type for better handling of date-related operations.
-
 4. **Updated Data Information:**
    - After the data cleaning steps, the dataset information was displayed again to confirm the changes.
 
