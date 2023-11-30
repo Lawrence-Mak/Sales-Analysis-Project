@@ -20,6 +20,7 @@ This project involves exploratory data analysis (EDA), visualizations, and machi
 The dataset captures historical sales of a supermarket company in three different branches over a span of three months. Predictive data analytics methods can be applied to understand sales trends.
 
 Attribute information:
+
 Invoice id: Computer generated sales slip invoice identification number
 Branch: Branch of supercenter (3 branches are available identified by A, B and C).
 City: Location of supercenters
@@ -31,12 +32,16 @@ Quantity: Number of products purchased by customer
 Tax: 5% tax fee for customer buying
 Total: Total price including tax
 Date: Date of purchase (Record available from January 2019 to March 2019)
-Time: Purchase time (10am to 9pm)
-Payment: Payment used by customer for purchase (3 methods are available – Cash, Credit card and Ewallet)
+Time: Purchase time (10 am to 9 pm)
+Payment: Payment used by customer for purchase (3 methods are available – Cash, Credit card, and Ewallet)
 COGS: Cost of goods sold
 Gross margin percentage: Gross margin percentage
 Gross income: Gross income
 Rating: Customer stratification rating on their overall shopping experience (On a scale of 1 to 10)
+
+
+
+
 
 
 ## Key Features
