@@ -181,21 +181,132 @@ plt.show()
 
 #### Branch Analysis
   - Investigate sales distribution across different branches. Analyze the performance of each branch in terms of total sales and customer satisfaction rating
+![image](https://github.com/Lawrence-Mak/Sales-Analysis-Project/assets/83872954/c7657168-3451-4ffa-aba1-b25c0b88d34a)
 
+<details>
+<summary style="color: blue;">Code</summary>
+  
+```python
+# Set the figure size
+fig, axes = plt.subplots(1, 2, figsize=(16, 6))
+
+# Plot 1: Total Sales by Branch
+sns.barplot(x='Branch', y='Total', data=df, estimator=sum, ci=None, palette='viridis', ax=axes[0])
+axes[0].set_title('Total Sales by Branch')
+axes[0].set_xlabel('Branch')
+axes[0].set_ylabel('Total Sales')
+
+# Plot 2: Average Rating by Branch
+sns.barplot(x='Branch', y='Rating', data=df, estimator='mean', ci=None, palette='viridis', ax=axes[1])
+axes[1].set_title('Average Rating by Branch')
+axes[1].set_xlabel('Branch')
+axes[1].set_ylabel('Average Rating')
+
+# Adjust layout
+plt.tight_layout()
+
+# Show the combined plot
+plt.show()
+```
+</details>
 
 
 #### Payment Method Analysis
 - Examine the distribution of sales based on payment methods.
   Compare the average sales for different payment methods.
   
+![image](https://github.com/Lawrence-Mak/Sales-Analysis-Project/assets/83872954/d043a767-9256-46fb-b4c1-646d91c6c0f5)
 
+<details>
+<summary style="color: blue;">Code</summary>
+  
+```python
+# Set the figure size
+fig, axes = plt.subplots(1, 2, figsize=(16, 6))
 
+# Plot 1: Distribution of Sales by Payment Method
+sns.countplot(x='Payment', data=df, palette='Set2', ax=axes[0])
+axes[0].set_title('Distribution of Sales by Payment Method')
+axes[0].set_xlabel('Payment Method')
+axes[0].set_ylabel('Count')
+
+# Plot 2: Average Sales by Payment Method
+sns.barplot(x='Payment', y='Total', data=df, estimator='mean', ci=None, palette='Set2', ax=axes[1])
+axes[1].set_title('Average Sales by Payment Method')
+axes[1].set_xlabel('Payment Method')
+axes[1].set_ylabel('Average Sales')
+
+# Rotate x-axis labels for better visibility
+for ax in axes:
+    ax.tick_params(axis='x', rotation=45)
+
+# Adjust layout
+plt.tight_layout()
+
+# Show the combined plot
+plt.show()
+```
+</details>
 
 
 ### Machine Learning
-
 Apply predictive analytics methods to forecast sales trends.
 
-### Visualization
+We will creating a machine learning model to predict total sales. 
 
-Create visualizations to present insights in an understandable manner.
+Step 1: Feature selection. 
+Identify the most significant factors that impact total sales.
+Use techniques like correlation analysis, feature importance from tree-based models, or statistical tests.
+
+We will be using Correlation Analysis to determine correlated features
+
+```python
+# Encode categorical variables 
+df_encoded = pd.get_dummies(df, columns=['Branch', 'City', 'Customer type', 'Gender', 'Product line', 'Payment'])
+
+# Calculate correlation matrix
+correlation_matrix = df_encoded.corr()
+
+# Plot correlation heatmap
+plt.figure(figsize=(12, 8))
+sns.heatmap(correlation_matrix[['Total']], annot=True, cmap='coolwarm', linewidths=.5)
+plt.title('Correlation Heatmap')
+plt.show()
+```
+![image](https://github.com/Lawrence-Mak/Sales-Analysis-Project/assets/83872954/bd589800-94c7-439e-bb59-9f676de47475)
+
+We can see that tax, cogs (cost of goods sold) and gross income have a perfect correlation of 1, it implies that they are linearly dependent. In a predictive model, using all three of them might introduce multicollinearity issues, where one variable can be predicted perfectly from the others. 
+
+Therefore, its best to choose only one of these variables to represent the information they collevtively carry. 
+```python
+# Check pairwise correlation
+correlation_tax_cogs = df[['Tax 5%', 'cogs']].corr().iloc[0, 1]
+correlation_tax_gross = df[['Tax 5%', 'gross income']].corr().iloc[0, 1]
+correlation_cogs_gross = df[['cogs', 'gross income']].corr().iloc[0, 1]
+
+# Decide which variable to keep based on correlations
+if correlation_tax_cogs >= correlation_tax_gross and correlation_tax_cogs >= correlation_cogs_gross:
+    # Keep 'Tax'
+    df.drop(['cogs', 'gross income'], axis=1, inplace=True)
+    kept_variable = 'Tax'
+elif correlation_tax_gross >= correlation_tax_cogs and correlation_tax_gross >= correlation_cogs_gross:
+    # Keep 'gross income'
+    df.drop(['Tax 5%', 'cogs'], axis=1, inplace=True)
+    kept_variable = 'Gross Income'
+else:
+    # Keep 'cogs'
+    df.drop(['Tax 5%', 'gross income'], axis=1, inplace=True)
+    kept_variable = 'COGS'
+
+print(f"The code ends up keeping: {kept_variable}")
+```
+
+This code checks the pairwise correlations between Tax, COGS, and Gross Income and decides which one to keep based on the highest correlation. In this case, we keep Gross Income as our predictive variable. 
+
+
+
+
+
+
+
+
