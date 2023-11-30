@@ -1,13 +1,12 @@
 # Supermarket Sales Analysis
 
 ## Introduction
-
 This project involves exploratory data analysis (EDA), visualizations, and machine learning model training/testing using a sales dataset.
 
 ## Table of Contents
 
 - [About Dataset](#about-dataset)
-- [Key Features]
+- [Key Features](#key-features)
   - [Data Cleaning and Preprocessing](#data-cleaning-and-preprocessing)
   - [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
     - [Customer Demographics](#Customer-Demographics)
