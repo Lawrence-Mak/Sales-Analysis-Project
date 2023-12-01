@@ -377,7 +377,7 @@ R-squared: 1.0 Ranges from 0 to 1, where 1 indicates a perfect fit. An R-squared
 
 These results suggest that the model is performing exceptionally well on the testing dataset. However, it's essential to keep in mind that such perfect performance might be a sign of overfitting. Its almost impossible to achieve a perfect fit, therefore to the best of my knowledge this dataset has been created, instead of scraped from real world scenarios.
 
-In sumamry, we have created a perfect model, however there are many implications that this would never happen in the real world. Real-world data often contains noise, outliers, and missing values. In the first place, this dataset did not include any outliers, missing data, or noise. It is very likely that this dataset was generated synthetically for educational or illustrative purposes, it might not accurately represent a real-world scenario.
+In summary, we have created a perfect model, however there are many implications that this would never happen in the real world. Real-world data often contains noise, outliers, and missing values. In the first place, this dataset did not include any outliers, missing data, or noise. It is very likely that this dataset was generated synthetically for educational or illustrative purposes, it might not accurately represent a real-world scenario.
 
 
 
